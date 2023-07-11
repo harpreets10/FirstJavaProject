@@ -1,34 +1,46 @@
 package program;
 
-public class UserLogin {	
-int i;	
-String userid;
-String password;
-String entereduserid;
-String enteredpassword;
+import java.util.Scanner;
 
-void validateUseridAndPassword(){
-while(i<=3) {
-if(userid.equals(entereduserid) && password.equals(enteredpassword)) {
-System.out.println("You are logged in to the application");
-break;
-}
+public class UserLogin {
+	Scanner sc = new Scanner(System.in);
+	String userid = "pivotAdmin";
+	String password = "Admin123";
+	String entereduserid;
+	String enteredpassword;
+	int attempts = 1;
+	int maxattempts = 4;
 
-else if(!userid.equals(enteredpassword) && !password.equals(enteredpassword)) {
+	void validateUseridAndPassword() {
+		while (attempts<=maxattempts) {
+			System.out.println("login attempt number:"+ attempts);
+			System.out.println("enter the userid");
+			userid = sc.next();
+			System.out.println("enter the password");
+			password = sc.next();
+			
+			if (userid.equals(entereduserid) && password.equals(enteredpassword)) {
+				System.out.println("You are logged in to the application");
+				break;
+			}
+			else
+				{
+				attempts++;
+				if(attempts==maxattempts){
+					System.out.println("account locked");
+					break;
+				}
+			System.out.println("incorrect userid and password");
 
-System.out.println("incorrect userid and password try again");
-i++;
-}
-else {
-System.out.println("account has been locked");
-break;
-}	
-}
-}
-}
+		}
+			
+				
+				}
+				
+					
+				}
+			}
+		
 
-
-
-
-
-
+				
+	
