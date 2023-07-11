@@ -2,13 +2,18 @@ package waterTank;
 
 public class WaterTank {
 	int capacity;
-	void WaterTankcapcity() {
-	while(capacity<=100) {
-	capacity+=10;
-	System.out.println("water tank filled"+ capacity);
+	int maxcapacity;
+	int maxfillcapacity;
+	int fillamount;
 	
-	if(capacity==100){
-	System.out.println("water tank reach to the capacity of 100");
+	void WaterTankcapcity() {
+	while(capacity<=maxfillcapacity) {
+	capacity+=fillamount;
+	System.out.println("water tank filled" + capacity +"L OF Water");
+	
+	if(capacity==maxfillcapacity){
+	System.out.println("water tank reach to the maxfillcapacity of"+ maxfillcapacity);
+	
 	break;
 	}
 	}
