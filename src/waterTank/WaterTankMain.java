@@ -3,17 +3,12 @@ package waterTank;
 public class WaterTankMain {
 
 	public static void main(String[] args) {
-	WaterTank bucket = new WaterTank();
-	bucket.maxcapacity=100;
-	bucket.capacity=0;
-	bucket.fillamount=10;
-	bucket.maxfillcapacity=90;
-    bucket.WaterTankcapcity();
-		
-			
-		
-		
-		
+		WaterTank bucket = new WaterTank();
+		bucket.maxCapacity = 100;
+		bucket.waterLevel = 89;
+		bucket.fillAmount = 9;
+		bucket.maxFillCapacity = 89;
+		bucket.WaterTankCapcity();
 
 	}
 
